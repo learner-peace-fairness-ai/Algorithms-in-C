@@ -25,7 +25,7 @@ Function ConvertTo10進数(ByVal str As String) As Long
     Next
     
     If is負の数 Then
-        ConvertTo10進数 = decimalNumber * -1
+        ConvertTo10進数 = decimalNumber * (-1)
     Else
         ConvertTo10進数 = decimalNumber
     End If
