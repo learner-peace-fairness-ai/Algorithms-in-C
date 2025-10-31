@@ -1,5 +1,5 @@
 Function gcd(ByVal u As Long, ByVal v As Long) As Long
-    Do While u > 0
+    Do Until u = 0
         If u < v Then
             Dim temp As Long
             
