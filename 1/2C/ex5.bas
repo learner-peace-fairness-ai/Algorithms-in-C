@@ -53,9 +53,9 @@ Sub Print2進数(ByVal num As Long)
             End If
         Next
     End If
-    
-    For i = i_符号ビット To i_最下位桁 Step -1
-        Dim ch As String
+
+    Dim ch As String
+    For i = i_符号ビット To i_最下位桁 Step -1    
         ch = CStr(arr(i))
         
         Debug.Print ch;
