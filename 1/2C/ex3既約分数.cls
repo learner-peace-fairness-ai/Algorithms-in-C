@@ -14,10 +14,9 @@ End Sub
 
 
 Private Function gcd(ByVal u As Long, ByVal v As Long) As Long
+    Dim temp As Long
     Do Until u = 0
         If u < v Then
-            Dim temp As Long
-            
             temp = u
             u = v
             v = temp
