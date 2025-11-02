@@ -10,15 +10,15 @@ Function ConvertTo10進数(ByVal str As String) As Long
     
     Dim decimalNumber As Long
     decimalNumber = 0
-
+    
+    Dim ch As String
+    Dim num As Integer
     Dim i As Long
     For i = 1 To Len(str)
-        Dim ch As String
         ch = Mid(str, i, 1)
         
         If ch = " " Then Exit For
         
-        Dim num As Integer
         num = Asc(ch) - Asc("0")
         
         decimalNumber = decimalNumber * 10 + num
