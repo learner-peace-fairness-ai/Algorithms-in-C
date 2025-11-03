@@ -29,14 +29,3 @@ Public Function InsertAfter(ByVal val, Optional nd As Node = Nothing)
     
     Set InsertAfter = newNode
 End Function
-
-Public Sub PrintAll()
-    Dim nd As Node
-    Set nd = head_.nextNode
-    
-    Do Until nd Is tail_
-        Debug.Print nd.key
-
-        Set nd = nd.nextNode
-    Loop
-End Sub
