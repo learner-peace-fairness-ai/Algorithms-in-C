@@ -1,8 +1,5 @@
-Option Explicit
-
 Private head_ As Node
 Private tail_ As Node
-
 
 Public Sub Init()
     Set head_ = New Node
