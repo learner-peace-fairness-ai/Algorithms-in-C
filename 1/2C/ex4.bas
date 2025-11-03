@@ -1,5 +1,5 @@
-Function ConvertTo10進数(ByVal str As String) As Long
-    Dim is負の数 As Boolean
+Function ConvertTo10進数(ByVal str)
+    Dim is負の数
     If Left(str, 1) = "-" Then
         is負の数 = True
         
@@ -8,12 +8,12 @@ Function ConvertTo10進数(ByVal str As String) As Long
         is負の数 = False
     End If
     
-    Dim decimalNumber As Long
+    Dim decimalNumber
     decimalNumber = 0
     
-    Dim ch As String
-    Dim num As Integer
-    Dim i As Long
+    Dim ch
+    Dim num
+    Dim i
     For i = 1 To Len(str)
         ch = Mid(str, i, 1)
         
