@@ -1,43 +1,47 @@
-Private Const HEAD_ = 1
-Private Const TAIL_ = 2
+Private Const HEAD = 1
+Private Const TAIL = 2
 
-Private 未使用の先頭_
-Private key_()
-Private next_()
+Private 未使用
+Private key()
+Private 次()
 
-Property Get HEAD()
-    HEAD = HEAD_
-End Property
 
 Sub Initialize(listSize)
-    ReDim key_(1 To listSize + 2)
-    ReDim next_(1 To listSize + 2)
+    ReDim key(1 To listSize + 2)
+    ReDim 次(1 To listSize + 2)
     
-    未使用の先頭_ = 3
+    未使用 = 3
     
-    next_(HEAD_) = TAIL_
-    next_(TAIL_) = TAIL_
+    次(HEAD) = TAIL
+    次(TAIL) = TAIL
 End Sub
 
 Sub DeleteNext(node)
-    Dim 次
-    次 = next_(node)
+    Dim nextNode
+    nextNode = 次(node)
     
-    Dim 次の次
-    次の次 = next_(次)
-    
-    next_(node) = 次の次
+    次(node) = 次(nextNode)
 End Sub
 
 Function InsertAfter(val, node)
-    Dim 新
-    新 = 未使用の先頭_
-    未使用の先頭_ = 新 + 1
+    Dim newNode
+    newNode = 未使用
+    未使用 = newNode + 1
     
-    key_(新) = val
-    next_(新) = next_(node)
+    key(newNode) = val
+    次(newNode) = 次(node)
     
-    next_(node) = 新
+    次(node) = newNode
     
-    InsertAfter = 新
+    InsertAfter = newNode
 End Function
+
+Sub PrintAll()
+    Dim node
+    node = 次(HEAD)
+    
+    Do Until node = TAIL
+        Debug.Print key(node)
+        node = 次(node)
+    Loop
+End Sub
